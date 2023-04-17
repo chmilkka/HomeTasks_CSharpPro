@@ -9,7 +9,7 @@ namespace HomeTask1
 {
     internal class Adult : Human, IWork
     {
-        public Adult(int age, string firstName, string lastName) : base(age, firstName, lastName)
+        public Adult(IdentityDocument id) : base(id)
         {
         }
 
@@ -21,9 +21,10 @@ namespace HomeTask1
         {
             base.Move();
         }
-        public void Work()
+
+        public void DoAdultWork()
         {
-            Console.WriteLine("I`m working :(");
+            Console.WriteLine("I can do adult work!");
         }
     }
 }

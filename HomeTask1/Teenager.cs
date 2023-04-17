@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace HomeTask1
 {
-    internal class Teenager : Human, IStudy
+    internal class Teenager : Human, IWork, IGrow
     {
-        public Teenager(int age, string firstName, string lastName) : base(age, firstName, lastName)
+        public Teenager(IdentityDocument id) : base(id)
         {
         }
 
@@ -23,9 +23,14 @@ namespace HomeTask1
             base.Move();
         }
 
-        public void Study()
+        public void DoAdultWork()
         {
-            Console.WriteLine("I`m studing :(");
+            Console.WriteLine("I can do adult work, but I`m a teen!");
+        }
+
+        public void Growing()
+        {
+            Console.WriteLine("I'm a teen, I'm also growing!");
         }
     }
 }

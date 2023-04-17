@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HomeTask1.Interface;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,28 +11,20 @@ namespace HomeTask1
     {
         public static void Verification(Human human)
         {
-            Console.WriteLine($"{human.FirstName } {human.LastName } {human.Age } y.o");
+            Console.WriteLine($"{human.Id.Gender} {human.Id.FirstName} {human.Id.LastName} {human.Id.Age} y.o");
         }
-        public static void DoMethods(Human human)
+        public static void DoCommonMethods(Human human)
         {
-            if (human is Kiddy child)
-            {
-                child.Talk();
-                child.Move();
-                child.Cry();
-            }
-            if (human is Teenager teen)
-            {
-                teen.Talk();
-                teen.Move();
-                teen.Study();
-            }
-            if (human is Adult adult)
-            {
-                adult.Talk();
-                adult.Move();
-                adult.Work();
-            }
+            human.Talk();
+            human.Move();
+        }
+        public static void DoSpecialMethod1(IWork human)
+        {
+            human.DoAdultWork();
+        }
+        public static void DoSpecialMethod2(IGrow human)
+        {
+            human.Growing();
         }
     }
 }

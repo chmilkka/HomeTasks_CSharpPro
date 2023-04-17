@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace HomeTask1.Interface
 {
-    internal interface ICry
+    internal interface IGrow
     {
-        void Cry();
+        void Growing();
     }
 }

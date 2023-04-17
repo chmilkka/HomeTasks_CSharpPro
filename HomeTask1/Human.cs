@@ -8,15 +8,12 @@ namespace HomeTask1
 {
     internal abstract class Human
     {
-        public int Age { get; private set; }
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
-        public Human(int age, string firstName, string lastName)
+        
+        public Human(IdentityDocument id)
         {
-            Age = age;
-            FirstName = firstName;
-            LastName = lastName;
+            Id = id;
         }
+        public IdentityDocument Id { get; set; }
 
         public abstract void Talk();
              

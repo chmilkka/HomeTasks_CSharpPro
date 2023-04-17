@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HomeTask1.Interface
+namespace HomeTask1
 {
-    internal interface IStudy
+    public enum Gender
     {
-        void Study();
+        Male,   
+        Female
     }
 }

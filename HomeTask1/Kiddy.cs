@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace HomeTask1
 {
-    internal class Kiddy : Human, ICry
+    internal class Kiddy : Human, IGrow
     {
-        public Kiddy(int age, string firstName, string lastName) : base(age, firstName, lastName)
+        public Kiddy(IdentityDocument id) : base(id)
         {
         }
 
@@ -22,9 +22,9 @@ namespace HomeTask1
             Console.WriteLine(@"I can only crawl!");
         }
 
-        public void Cry()
+        public void Growing()
         {
-            Console.WriteLine("AAaaAAbbaba :(");
+            Console.WriteLine("I'm a child, I'm growing up fast!");
         }
     }
 }

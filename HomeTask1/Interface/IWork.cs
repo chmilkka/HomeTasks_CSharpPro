@@ -8,6 +8,6 @@ namespace HomeTask1.Interface
 {
     internal interface IWork
     {
-        void Work();
+        void DoAdultWork();
     }
 }
