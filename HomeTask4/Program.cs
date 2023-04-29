@@ -86,7 +86,7 @@ namespace HomeTask4
             .Where(x => x.Age > 20)
             .Select(x => new { Id = x.Id, Name = x.Name, Age = x.Age })
             .GroupBy(x => x.Age)
-            .ToDictionary(x => x.Key, x => x.ToList());
+            .ToDictionary(x => x.Key, x => x.Select(x => new { x.Name, x.Id }).ToList());
             foreach (var person in olderPersons)
             {
                 Console.WriteLine($"Age: {person.Key}");
