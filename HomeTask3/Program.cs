@@ -6,6 +6,7 @@
         {           
             var factory = new Factory<TestClass>();
             var testClass = factory.Create();
+
             testClass.DoubleWork();
         }
     }
