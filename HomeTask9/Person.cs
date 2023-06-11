@@ -12,8 +12,11 @@ namespace HomeTask9
         {
             
         }
+        [DisplayName]
         public string FirstName { get; set; }
+        [DisplayName]
         public string LastName { get; set; }
+
         public string PhoneNumber { get; set; }
         public Person(string firstName, string lastName, string phoneNumber)
         {

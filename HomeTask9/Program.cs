@@ -49,7 +49,10 @@ namespace HomeTask9
             var properties = type.GetProperties();
             foreach (var property in properties)
             {
-                result += property.Name + ":" + property.GetValue(ins) + ";";             
+                if(Attribute.IsDefined(property, typeof(DisplayNameAttribute)))
+                {
+                    result += property.Name + ":" + property.GetValue(ins) + ";";
+                }           
             }
             return result;
         }
@@ -65,7 +68,10 @@ namespace HomeTask9
                     var fieldName = values[0];
                     var fieldValue = values[1];
                     var prop = resultObj.GetType().GetProperty(fieldName);
-                    prop.SetValue(resultObj, fieldValue);
+                    if (Attribute.IsDefined(prop, typeof(DisplayNameAttribute)))
+                    {
+                        prop.SetValue(resultObj, fieldValue);
+                    }                  
                 }                
             }
             return resultObj;
@@ -82,7 +88,10 @@ namespace HomeTask9
                     var fieldName = values[0];
                     var fieldValue = values[1];
                     var prop = resultObj.GetType().GetProperty(fieldName);
-                    prop.SetValue(resultObj, fieldValue);
+                    if (Attribute.IsDefined(prop, typeof(DisplayNameAttribute)))
+                    {
+                        prop.SetValue(resultObj, fieldValue);
+                    }
                 }
             }
             return resultObj;
